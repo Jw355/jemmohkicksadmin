@@ -2,6 +2,7 @@
 
 import { ColumnDef } from "@tanstack/react-table";
 import { CellAction } from "./cell-action";
+import Image from "next/image";
 
 export type BillboardColum = {
   id: string;
@@ -24,7 +25,12 @@ export const columns: ColumnDef<BillboardColum>[] = [
 
       return (
         <div>
-          <img src={urlString} width={100} height={100} />
+          <Image
+            alt="billboard image"
+            src={urlString}
+            width={100}
+            height={100}
+          />
         </div>
       );
     },

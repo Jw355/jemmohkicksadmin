@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useParams, usePathname } from "next/navigation";
 import { SettingsIcon } from "../icons/settings-icon";
 import Categories from "../icons/Categories";
+import Image from "next/image";
 
 export const Sidenavepane = ({
   className,
@@ -70,7 +71,8 @@ export const Sidenavepane = ({
   return (
     <nav className={cn("flex flex-col space-y-8 pl-5 w-[15%]", className)}>
       <Link href={`/Dashboard/${params.storeId}`}>
-        <img
+        <Image
+          alt="Logo image"
           src="/image/JemmohKicks_Trimmed.png"
           className="w-full h-14 px-4"
         />

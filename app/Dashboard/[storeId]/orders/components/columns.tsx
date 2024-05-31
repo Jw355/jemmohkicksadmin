@@ -2,6 +2,7 @@
 
 import { ColumnDef } from "@tanstack/react-table";
 import { CellAction } from "./cell-action";
+import Image from "next/image";
 
 export type OrderColumn = {
   id: string;
@@ -44,7 +45,12 @@ export const columns: ColumnDef<OrderColumn>[] = [
 
       return (
         <div>
-          <img src={urlString} width={100} height={100} />
+          <Image
+            alt="orders product image"
+            src={urlString}
+            width={100}
+            height={100}
+          />
         </div>
       );
     },

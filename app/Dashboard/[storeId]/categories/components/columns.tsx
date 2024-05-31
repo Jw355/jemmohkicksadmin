@@ -2,6 +2,7 @@
 
 import { ColumnDef } from "@tanstack/react-table";
 import { CellAction } from "./cell-action";
+import Image from "next/image";
 
 export type CategoryColum = {
   id: string;
@@ -29,7 +30,12 @@ export const columns: ColumnDef<CategoryColum>[] = [
 
       return (
         <div>
-          <img src={urlString} width={100} height={100} />
+          <Image
+            alt="category image"
+            src={urlString}
+            width={100}
+            height={100}
+          />
         </div>
       );
     },
